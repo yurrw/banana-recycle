@@ -8,13 +8,13 @@ services:
     networks:
       tnet:
         aliases:
-          - biobody_api
+          - bananas_api
     volumes:
       - .:/app
     depends_on:
-      - db_biobody
+      - db_bananas
 
-  db_biobody:
+  db_bananas:
     image: postgres
     restart: always
     environment:
@@ -26,15 +26,12 @@ services:
     networks:
       tnet:
         aliases:
-          - biobody_db
+          - bananas_db
     volumes:
-      - ~/data/biobody/db:/var/lib/postgresql/data
+      - ~/data/bananas/db:/var/lib/postgresql/data
       # - pgdata:/var/lib/postgresql/data
 
 networks:
   tnet:
     external: true
 
-volumes:
-  pgdata:
-     external: true

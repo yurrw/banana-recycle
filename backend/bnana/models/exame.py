@@ -1,8 +1,8 @@
 from django.db import models
-from bb.models.estabelecimento import Estabelecimento
-from bb.models.orientador import Orientador
-from bb.models.maquina import Maquina
-from bb.models.pessoa import Pessoa
+from bnana.models.estabelecimento import Estabelecimento
+from bnana.models.orientador import Orientador
+from bnana.models.maquina import Maquina
+from bnana.models.pessoa import Pessoa
 
 
 class Exame(models.Model):

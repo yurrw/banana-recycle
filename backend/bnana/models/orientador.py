@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.validators import RegexValidator, validate_email
-from bb.utils.validators import validate_cpf, validate_cnpj
+from bnana.utils.validators import validate_cpf, validate_cnpj
 
 class Orientador(models.Model):
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',

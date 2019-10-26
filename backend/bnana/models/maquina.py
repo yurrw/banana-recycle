@@ -1,5 +1,5 @@
 from django.db import models
-from bb.models import Estabelecimento
+from bnana.models import Estabelecimento
 
 
 class MaquinaTipo(models.Model):

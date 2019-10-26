@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from bb.models.biobodyuser import BiobodyUser
+from bnana.models.bananasuser import BananasUser
 
-from bb.models import Estabelecimento, Exame, Maquina, Orientador, Pessoa
+from bnana.models import Estabelecimento, Exame, Maquina, Orientador, Pessoa
 
 # Register your models here.
 admin.site.register(Estabelecimento)
@@ -12,7 +12,7 @@ admin.site.register(Orientador)
 admin.site.register(Pessoa)
 
 
-class BiobodyUserAdmin(UserAdmin):
+class BananasUserAdmin(UserAdmin):
     add_fieldsets = UserAdmin.add_fieldsets + (
         (None, {
             'fields': ('role',),
@@ -20,4 +20,4 @@ class BiobodyUserAdmin(UserAdmin):
     )
 
 
-admin.site.register(BiobodyUser, BiobodyUserAdmin)
+admin.site.register(BananasUser, BananasUserAdmin)

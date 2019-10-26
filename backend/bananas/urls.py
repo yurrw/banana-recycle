@@ -1,4 +1,4 @@
-"""biobody URL Configuration
+"""bananas URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
 
-from bb.views import TokenDetails
+from bnana.views import TokenDetails
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^auth/', include('knox.urls')),
     url(r'^auth/token/', TokenDetails.as_view()),
-    url(r'', include('bb.urls'))
+    url(r'', include('bnana.urls'))
 ]

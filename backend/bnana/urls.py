@@ -2,9 +2,9 @@ from django.conf.urls import url
 from rest_framework import routers
 from rest_framework.urlpatterns import format_suffix_patterns
 
-from bb.routers import LookupAtTheEndRouter
+from bnana.routers import LookupAtTheEndRouter
 
-from bb.views import *
+from bnana.views import *
 # from cv.views.user import UserViewSetAnom
 
 srouter = routers.SimpleRouter()
