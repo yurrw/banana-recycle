@@ -59,6 +59,32 @@ export function logout() {
 	};
 }
 
+export function criaUsuario(user, password, email) {
+	return function(dispatch, getState) {
+
+		const URL = `${ROOT}/auth/create/`;
+		const json = { user: user, password: password, email: email };
+
+		return fetch(URL, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'				
+			},
+			body: JSON.stringify(json)		
+		})
+		.then((response) => checkStatus(response, dispatch))
+		.then(() => {
+			console.trace();
+			// dispatch(setCredentials(null, null));
+			dispatch(push('/login'));
+		})
+		.catch((e) => {
+			// dispatch(setCredentials(null, null));
+			// dispatch(push('/login'));
+		});		
+	};
+}
+
 export function isTokenValid() {
 	return function(dispatch, getState) {		
 		dispatch(isFetching(true));
@@ -80,10 +106,9 @@ export function isTokenValid() {
 }
 
 export function changePassword(newPw, currPw, onSuccess, onError) {
-	Event('Login', 'resetPassword', 'Alterou a senha de acesso.');
 	return function(dispatch, getState) {
 
-		const URL = `${ROOT}/user/change_password/`;
+		const URL = `${ROOT}/auth/change_password/`;
 		const json = { new_password: newPw, old_password: currPw };
 
 		return fetch(URL, {
@@ -104,7 +129,6 @@ export function changePassword(newPw, currPw, onSuccess, onError) {
 }
 
 export function resetPassword(email, onSuccess, onError) {
-	Event('Login', 'resetPassword', 'Tentou resetar a senha.');
 	return function(dispatch, getState) {
 
 		const URL = `${ROOT}/user/reset_password/`;
@@ -119,31 +143,6 @@ export function resetPassword(email, onSuccess, onError) {
 		})
 		.then((response) => checkStatus(response, dispatch))
 		.then(() => onSuccess())
-		.catch((e) => {
-			onError();
-			console.warn(e);
-		});
-	};
-}
-
-export function getProjectPermission(onSuccess, onError) {
-	return function(dispatch, getState) {
-
-		const URL = `${ROOT}/user/get_permissions/`;
-		//const json = { new_password: newPw, old_password: currPw };
-
-		return fetch(URL, {
-			method: 'GET',
-			headers: {
-				'Authorization': 'Token ' + getState().login.credentials.token,
-				'Content-Type': 'application/json'
-			}
-		})
-		.then((response) => checkStatus(response, dispatch))
-		.then(response => response.json())
-		.then(data => {
-			dispatch(setProjectAccess(data));
-		})
 		.catch((e) => {
 			onError();
 			console.warn(e);

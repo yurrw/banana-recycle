@@ -13,6 +13,7 @@ import PessoaContainer from '../containers/PessoaContainer';
 import ChangePasswordContainer from 'containers/ChangePasswordContainer';
 import RecoverPasswordContainer from 'containers/RecoverPasswordContainer';
 import WelcomeContainer from 'containers/WelcomeContainer';
+import CadUserContainer from 'containers/CadUserContainer';
 
 import Dashboard from 'components/Home/Dashboard';
 import NotFound from 'components/Common/NotFound';
@@ -24,6 +25,7 @@ export default (store) => (
 		<IndexRedirect to="/admin/welcome" />
 		<Route path="admin" component={MainContainer}>
 			<IndexRoute component={Dashboard} />
+			<Route path='caduser' component={CadUserContainer} />
 			<Route path='change_password' component={ChangePasswordContainer} />
 			<Route path='authexams/view' component={ExameListContainer} />
 
