@@ -95,11 +95,11 @@ CORS_ORIGIN_ALLOW_ALL = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'biobody',
-        'USER': 'biobody',
-        'PASSWORD': 'Cd8ncW-3JzmTZ4G',
+        'NAME': 'bananal',
+        'USER': 'banana',
+        'PASSWORD': 'bananadepijama',
         'HOST': 'biobody_db',
-        'PORT': '2346',
+        'PORT': '2384',
     }
 }
 
