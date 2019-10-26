@@ -48,6 +48,9 @@ export default class Navbar extends React.Component {
 							<li className={this.props.pathname === "/admin/documents/create" ? 'active' : ''}>
 								<Link to="/admin/authexam/create">Liberar Exame</Link>
 							</li>
+							<li className={this.props.pathname === "/admin/documents/create" ? 'active' : ''}>
+								<Link to="/admin/qrcode/create">Troca aqui</Link>
+							</li>
 							<li className={this.props.pathname === "/admin/documents/view" ? 'active' : ''}>
 								<Link to="/admin/authexams/view">Exames Liberados</Link>
 							</li>	

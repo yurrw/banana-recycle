@@ -7,6 +7,7 @@
     "node": ">=4.2.0",
     "npm": "^3.0.0"
   },
+  "proxy": "http://localhost:8000",
   "scripts": {
     "clean": "rimraf dist",
     "compile": "better-npm-run compile",
@@ -99,6 +100,7 @@
     "react-modal-video": "^1.2.2",
     "react-pdf": "^3.0.6",
     "react-pdfobject": "^1.1.1",
+    "react-qr-reader": "^2.2.1",
     "react-redux": "^4.0.0",
     "react-redux-toastr": "^7.5.1",
     "react-router": "^2.0.0",
