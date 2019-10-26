@@ -1,0 +1,9 @@
+*.pyc
+*~
+__pycache__
+/static
+.DS_Store
+/cv/media
+.idea
+*.log
+/venv

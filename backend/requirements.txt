@@ -1,0 +1,8 @@
+Django
+django-cors-headers
+django-rest-knox
+djangorestframework
+psycopg2-binary
+Pillow
+pytz
+

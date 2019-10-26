@@ -1,0 +1,40 @@
+version: '3'
+services:
+  api:
+    build: .
+    restart: always
+    ports:
+      - "9091:80"
+    networks:
+      tnet:
+        aliases:
+          - biobody_api
+    volumes:
+      - .:/app
+    depends_on:
+      - db_biobody
+
+  db_biobody:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=biobody
+      - POSTGRES_PASSWORD=Cd8ncW-3JzmTZ4G
+      - POSTGRES_DB=biobody
+    ports:
+      - "2346:5432"
+    networks:
+      tnet:
+        aliases:
+          - biobody_db
+    volumes:
+      #- ~/data/biobody/db:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
+
+networks:
+  tnet:
+    external: true
+
+volumes:
+  pgdata:
+     external: true
