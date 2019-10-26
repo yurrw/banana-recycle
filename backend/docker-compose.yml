@@ -34,7 +34,3 @@ services:
 networks:
   tnet:
     external: true
-
-volumes:
-  pgdata:
-     external: true
