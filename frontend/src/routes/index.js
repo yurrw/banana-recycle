@@ -18,7 +18,8 @@ import CadUserContainer from 'containers/CadUserContainer';
 import Dashboard from 'components/Home/Dashboard';
 import NotFound from 'components/Common/NotFound';
 import ExameListContainer from '../containers/ExameListContainer';
-import ExameContainer from '../containers/ExameContainer';
+// import ExameContainer from '../containers/ExameContainer';
+import QrcodeContainer from '../containers/QrcodeContainer';
 
 export default (store) => (
 	<Route path='/' component={AppContainer}>
@@ -28,9 +29,10 @@ export default (store) => (
 			<Route path='caduser' component={CadUserContainer} />
 			<Route path='change_password' component={ChangePasswordContainer} />
 			<Route path='authexams/view' component={ExameListContainer} />
+			<Route path='qrcode' component={QrcodeContainer} />
 
 			<Route path='pessoa/create' component={PessoaContainer} />
-			<Route path='authexam/create' component={ExameContainer} />
+			{/* <Route path='authexam/create' component={ExameContainer} /> */}
 
 			<Route path='welcome' component={WelcomeContainer} />
 		</Route>

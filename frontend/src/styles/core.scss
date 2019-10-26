@@ -17,7 +17,7 @@
 	body {
 		margin: 0;
 		padding: 0;		
-		background-color: #eee;
+		background-color: #F3F0F2;
 		height: 100%;
 	}
 
@@ -29,17 +29,38 @@
 
 	.login-box {
 		max-width: 300px;
-		margin-top: 50px;
-		padding-top: 20px;
-		padding-bottom: 20px;
+		margin-top: 30px;
+		// padding-top: 20px;
+		// padding-bottom: 20px;
 		background-color: white;		
 	}
+	.login-top {
+		// padding-bottom: 20px;
+		background-color: #F2B33D;
+		width: 298px;
+		height: 277px;
+		// height: 300px;
+		margin-top: -50px;
+		margin-left: -15px;
 
+	}
+	.cs-card-Top{
+		margin-top: 50px;
+		padding-top: 20px;
+	}
+	.fmctFA{
+		font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+
+	}
+	.LogoTrashBoy {
+		padding-top:15px;
+	}
 	.login-title {
+		font-family: 'Roboto', sans-serif;
 		text-align: center;
 		font-size: 18px;
 		font-weight: bold;
-		color: #910b26;
+		color: #F2F2F2;
 	}
 
 	.Welcome-box {
@@ -78,8 +99,30 @@
 		margin-top: 0px;
 		margin-bottom: 10px;
 	}
-
-
+	.buttonwidth{
+		width: 100%!important;
+	}
+	.loginbt{
+		background-color: #F2B33D;
+		color:white;
+	}
+	.loginbt:hover{
+		background-color: #D9A23D;
+		color:white;
+	}
+	.cadbt{
+		background-color: #F3F0F2;
+		color:#363636;
+		width: 270px;
+	}
+	.cadbt:hover{
+		background-color: #F2B33D;
+		color:white;
+	}
+	.fa-facebook {
+		background: #3B5998!important;
+		color: white;
+	  }
 	.center {
   		display: block;
 		text-align: center;

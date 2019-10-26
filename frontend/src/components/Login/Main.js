@@ -23,28 +23,33 @@ export default class Main extends React.Component {
 	render () {
 		return (
 			<div className="container login-box cs-card">
-				<center><img src="biobodylogo.png" width="100" /></center>
-				<hr />
-				<div className="login-title">
-					Liberacao de Exames
+				<div className="login-top">
+					<div className="cs-card-Top">
+						<center><img src="Boy_Happy.png" width="100" /></center>
+						<div className="LogoTrashBoy">
+							<center><img src="TrashPay.png" width="100" /></center>
+						</div>
+					</div>
 				</div>
-				<hr />
+				<br></br>
+				{/* <hr /> */}
 				<form onSubmit={this.handleSubmit.bind(this)}>
-					<div className="form-group">
-						<label>Usuário</label>
-						<input type="text" className="form-control" ref={(node) => this._username = node} />
+					<div className=" form-group">
+						<br></br>
+						<input type="text" placeholder="&#xf007; usuário" className="form-control fmctFA"
+							ref={(node) => this._username = node} />
 					</div>
 					<div className="form-group">
-						<label>Senha</label>
-						<input type="password" className="form-control" ref={(node) => this._password = node} />
+						<input type="password" className="form-control fmctFA"
+							placeholder="&#xf084; senha" ref={(node) => this._password = node} />
 						<p />
 						<a href="recover_password" >Esqueceu a conta?</a>
 					</div>
 					<div className="row">
-						<div className="col-md-3">
+						<div className="col-md-12">
 							<button 
 								type="submit" 
-								className="btn btn-default">
+								className="loginbt btn btn-default btn-block">
 								Entrar
 							</button>
 						</div>
@@ -55,6 +60,26 @@ export default class Main extends React.Component {
 						</div>	
 					</div>					
 				</form>
+				<div className="row col-md-12 ">
+					<button 
+							type="submit"
+							onClick='' 
+							className="cadbt btn btn-default btn-block">
+							Cadastrar
+					</button>
+				</div>
+				<br></br>
+				<hr></hr>
+				<div className="row" style={{marginTop: '-10px'}}>
+					<div className="col-md-12">
+						<a href="#">
+							<center><img src="Facebook.png" width="200" /></center>
+						</a>
+					</div>
+				</div>
+
+				<br></br>
+				<br></br>
 			</div>
 		);
 	}

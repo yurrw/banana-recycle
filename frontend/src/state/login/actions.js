@@ -9,7 +9,6 @@ export function getToken(username, password) {
 		// Builds credentials
 		const URL = `${ROOT}/auth/login/`;
 		const auth = new Buffer(username + ':' + password).toString('base64');
-
 		// Set visual UI
 		dispatch(isFetching(true));
 
@@ -27,6 +26,7 @@ export function getToken(username, password) {
 			dispatch(push("/"));
 		})
 		.catch((e) => {
+			console.trace()
 			dispatch(isFetching(false));
 			console.warn(e);
 			// in case of fire the problem is down here
