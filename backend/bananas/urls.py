@@ -18,10 +18,13 @@ from django.urls import path, include
 from django.conf.urls import url
 
 from bnana.views import TokenDetails
+from bnana.views.bananauser import BananaUserViewSetAnom, BananaUserViewSet
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^auth/', include('knox.urls')),
     url(r'^auth/token/', TokenDetails.as_view()),
+    url(r'^auth/create/', BananaUserViewSetAnom.as_view({'post': 'create_user'})),
+    url(r'^auth/change_password/', BananaUserViewSet.as_view({'put': 'change_password'})),
     url(r'', include('bnana.urls'))
 ]
