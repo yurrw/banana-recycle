@@ -45,8 +45,19 @@ export default class ChangePassword extends React.Component {
 	render () {
 		return (
 			<div className="container login-box cs-card">
-				<h2 className="text-center">Trocar Senha</h2>				
-				<hr />				
+				<div className="login-top">
+					<div className="cs-card-Top">
+						<center><img src="Boy_Happy.png" width="100" /></center>
+						<div className="LogoTrashBoy">
+							<center><img src="TrashPay.png" width="100" /></center>
+						</div>
+					</div>
+				</div>
+				<br></br>
+				<span className="NewUserText">
+					Trocar Senha
+				</span>
+				<hr></hr>
 				<form onSubmit={this.handleSubmit.bind(this)}>
 					<div className="form-group">
 						<label>Senha Atual</label>
@@ -63,7 +74,7 @@ export default class ChangePassword extends React.Component {
 					<button 
 						type="submit"
 						disabled={this.state.isFetching}
-						className="btn btn-primary">
+						className="loginbt btn btn-default btn-block">
 						Enviar
 					</button>
 					<span style={{padding: "10px"}}>

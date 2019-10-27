@@ -12,7 +12,7 @@ export default class Navbar extends React.Component {
 	}
 	render () {
 		return (
-			<nav className="navbar navbar-default">
+			<nav className="navbar navbar-default navbarscss">
 				<div className="container-fluid">
 					<div className="navbar-header">
 
@@ -28,34 +28,35 @@ export default class Navbar extends React.Component {
 						</button>
 
 						{/* Icon Brand */}
-						<a className="navbar-brand" style={{height: "50px", paddingTop: "9px", paddingBottom: "9px"}}
+						<a className="navbar-brand" style={{height: "50px", paddingTop: "0px", 
+							paddingLeft: "30px", paddingBottom: "9px"}}
 							href="/">
-							<img alt="Brand" src="/biobodylogo.png" height="32px" />
+							<img alt="TrashCoin Logo" src="/TrashCointmpLogo.png" height="50px" />
 						</a>
 						
 					</div>
 					<div className="collapse navbar-collapse" id="cs-navbar-collapse">
 
-						<p className="navbar-text" style={{color: "#910b26", fontWeight: "bold"}}>
-							Liberacao de exames
+						<p className="navbar-text navbarTrashPay" >
+							<img src="TrashPayBlack.png" width="35"></img>
 						</p>
 
-						<ul className="nav navbar-nav">
+						<ul className="nav navbar-nav" id="nav-bananas">
 							<li className={this.props.pathname === "/admin/documents/create" ? 'active' : ''}>
-								<Link to="/admin/pessoa/create">Nova Pessoa</Link>
+								<Link to="/admin/welcome">Home</Link>
 							</li>
 
 							<li className={this.props.pathname === "/admin/documents/create" ? 'active' : ''}>
-								<Link to="/admin/authexam/create">Liberar Exame</Link>
+								<Link to="/admin/qrcode">Troca Aqui</Link>
 							</li>
 							<li className={this.props.pathname === "/admin/documents/create" ? 'active' : ''}>
-								<Link to="/admin/qrcode/create">Troca aqui</Link>
+								<Link to="/admin/qrcode/duo">Troca pra mim</Link>
 							</li>
 							<li className={this.props.pathname === "/admin/documents/view" ? 'active' : ''}>
-								<Link to="/admin/authexams/view">Exames Liberados</Link>
+								<Link to="/admin/authexams/view">Configurações</Link>
 							</li>	
-							<li><Link to="/admin/change_password">Trocar Senha</Link></li>
-							<li onClick={() => this.props.logout()}><a href="#">Sair</a></li>						
+							<li><Link to="/admin/change_password">Alterar Senha</Link></li>
+							<li onClick={() => this.props.logout()} ><a href="#">Sair</a></li>						
 						</ul>
 					</div>
 				</div>

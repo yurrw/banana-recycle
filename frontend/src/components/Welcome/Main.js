@@ -10,19 +10,45 @@ export default class Main extends React.Component {
 		return (
 			<div className="container Welcome-box cs-card">
 				<div className="Welcome-title">
-						Liberacao de Exames 
+						Histórico de consumo
 				</div>
-				<hr />
-				<div>
-					<Link to="/admin/documents/create" className="item-icon1 item-iconMargin">
-						<img src="/create_icon.png" className="center" />
-					</Link>
-
-					<Link to="/admin/documents/view" className="item-icon2 item-iconMargin">
-						<img src="/documents_icon.png" className="center" />
-					</Link>
+				<div className="container">
+					<div className="row">
+						<div className="col-md-6 allsideindex " >
+							<div className="linereta">
+							</div>
+							<div className="circletop">
+								<div className="boxInfo">
+									<span>
+										o tamanho da bolinha correlaciona a variação de itens reciclados em dado periodo de tempo.
+									</span>
+								</div>
+								<div className="circle1">
+									<div className='datetxt1'>
+									26/OUT/19
+									</div>
+								</div>
+								<div className="boxInfo2">
+									<span>
+										3 carrinhos de recompensa.
+										<br></br>
+										Você economizou cerca de 1kg de carbono durante esse período.
+									</span>
+								</div>
+								<div className="circle2">
+									<div className='datetxt2'>
+									04/JUL/19
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className=" center col-md-6 allleftindex">
+							<center><img src="Boy_Question.png" width="200" /></center>
+						</div>
+					</div>
+					
 				</div>
-
+				
 				<div>
 				</div>
 			</div>

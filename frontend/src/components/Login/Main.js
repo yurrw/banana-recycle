@@ -19,7 +19,6 @@ export default class Main extends React.Component {
 		}
 		return <span style={{color: "red"}}>{this.props.login.message}</span>;
 	}
-
 	render () {
 		return (
 			<div className="container login-box cs-card">
@@ -36,12 +35,12 @@ export default class Main extends React.Component {
 				<form onSubmit={this.handleSubmit.bind(this)}>
 					<div className=" form-group">
 						<br></br>
-						<input type="text" placeholder="&#xf007; usuário" className="form-control fmctFA"
+						<input type="text" placeholder="&#xf007;   usuário" className="form-control fmctFA"
 							ref={(node) => this._username = node} />
 					</div>
 					<div className="form-group">
 						<input type="password" className="form-control fmctFA"
-							placeholder="&#xf084; senha" ref={(node) => this._password = node} />
+							placeholder="&#xf084;   senha" ref={(node) => this._password = node} />
 						<p />
 						<a href="recover_password" >Esqueceu a conta?</a>
 					</div>
@@ -61,12 +60,14 @@ export default class Main extends React.Component {
 					</div>					
 				</form>
 				<div className="row col-md-12 ">
-					<button 
-							type="submit"
-							onClick='' 
-							className="cadbt btn btn-default btn-block">
+					<a href="/admin/caduser/">
+						<button 
+								type="submit"
+								onClick='' 
+								className="cadbt btn btn-default btn-block">
 							Cadastrar
-					</button>
+						</button>
+					</a>
 				</div>
 				<br></br>
 				<hr></hr>

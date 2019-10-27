@@ -34,6 +34,13 @@
 		// padding-bottom: 20px;
 		background-color: white;		
 	}
+	.NewUserText{
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+		font-size: 16px;
+		font-weight: bold;
+		color:#363636;
+	}
 	.login-top {
 		// padding-bottom: 20px;
 		background-color: #F2B33D;
@@ -44,6 +51,7 @@
 		margin-left: -15px;
 
 	}
+
 	.cs-card-Top{
 		margin-top: 50px;
 		padding-top: 20px;
@@ -78,23 +86,149 @@
 		padding-bottom: 20px;
 		background-color: white;
 	}
-
+	#QRCODEDAFE{
+		border-style: solid;
+		border-width: 3px 3px 3px 3px;
+		border-color: #F2B33D;
+		width:250px;
+		height: 250px;
+	}
 	.Welcome-title {
 		padding-top: 20px;
 		padding-bottom: 40px;
 		text-align: center;
-		font-size: 22px;
+		font-size: 24px;
 		font-weight: bold;
-		color: #910b26;
+		color: #363636;
 	}
+	.titlePageGGD{
+		padding-top: 20px;
+		padding-bottom: 40px;
+		text-align: center;
+		font-size: 24px;
+		font-weight: bold;
+		color: #363636;
+	}
+	.circle1 {
+		background: #F2B33D;
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+	}
+	.miniTextoExp{
+		margin-right: 10px;
+		padding: 5px!important;
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+		font-size: 16px;
 
+	}
+	.bntqrcode{
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.circle2 {
+		margin-top: 300px;	
+		background: #F2B33D;
+		width: 180px;
+		height: 180px;
+		border-radius: 50%;
+		margin-left: -40px;
+	}
+	.bntqrcode{
+
+	}
+	.boxInfo{
+		background-color:#FE8;
+		opacity: 0.8;
+		width:150px;
+		margin-left: 60px;
+		padding: 5px;
+		margin-top: -50px!important;
+	}
+	.boxInfo2{
+		background-color:#FE8;
+		opacity: 0.8;
+		width:150px;
+		margin-left: 60px;
+		padding: 5px;
+		margin-left: -130px;
+		margin-top: 80px;
+		position: absolute;
+	
+	}
+	.allsideindex{
+		margin-left: 180px;
+		padding-bottom: 120px;
+	}
+	.datetxt1,.datetxt2{
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.datetxt1{
+		padding-top: 30px;
+	}
+	.datetxt2 {
+		padding-top: 80px;
+	}
+	.circletop{
+		top: 195px;
+		position: absolute;
+		z-index: 10;
+		margin-left: -45px;
+	}
+	.linereta{
+		border-left: 5px solid #363636;
+		height: 700px;
+		margin-top: 10px;
+	}
 	.Welcome-subtitle {
 		padding-top: 40px;
 		font-size: 20px;
 		font-weight: bold;
 		color: #910b26;
 	}
+	.navbarTrashPay{
+		columns: #373737;;
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	#nav-bananas > li > a {
+		color:#4f4949;
+		font-family: 'Roboto', sans-serif;
+		// text-align: center;
+		font-size: 13px;
+		// font-weight: bold;
+	}
+	li::after {
+		background-color:#F2B33D;
+		content: "";
+		width: 0;
+		height: 3px;
+		left: 0;
+		transition: width 0.35s ease 0s;
+		position: absolute;
+	}
 
+	  
+	li:hover::after {
+		width: 100%;
+	}
+
+	#nav-bananas > li > a:hover {
+		color:#F2B33D;
+	}
+	.navbarscss{
+		// height: 100px;
+		// padding-bottom: 20px;
+		// padding-top: 20px;
+	}
 	.Welcome-divider {
 		margin-top: 0px;
 		margin-bottom: 10px;

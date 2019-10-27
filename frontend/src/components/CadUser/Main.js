@@ -24,34 +24,43 @@ export default class Main extends React.Component {
 	render () {
 		return (
 			<div className="container login-box cs-card">
-				<center><img src="biobodylogo.png" width="100" /></center>
-				<hr />
-				<div className="login-title">
-					Novo Usuário
+				<div className="login-top">
+					<div className="cs-card-Top">
+						<center><img src="Boy_Happy.png" width="100" /></center>
+						<div className="LogoTrashBoy">
+							<center><img src="TrashPay.png" width="100" /></center>
+						</div>
+					</div>
 				</div>
-				<hr />
+				<br></br>
+				<span className="NewUserText">
+					Novo usuário
+				</span>
+				<hr></hr>
 				<form onSubmit={this.handleSubmit.bind(this)}>
 					<div className="form-group">
-						<label>E-mail</label>
-						<input type="text" className="form-control" ref={(node) => this._email = node} />
+						<input type="text" className="form-control fmctFA"
+						placeholder="&#xf2b6;   e-mail" ref={(node) => this._email = node} />
 					</div>
 					<div className="form-group">
-						<label>Usuário</label>
-						<input type="text" className="form-control" ref={(node) => this._username = node} />
+						<input type="text" className="form-control fmctFA"
+						placeholder="&#xf007;   usuário" ref={(node) => this._username = node} />
 					</div>
 					<div className="form-group">
-						<label>Senha</label>
-						<input type="password" className="form-control" ref={(node) => this._password = node} />
+						<input type="password" className="form-control fmctFA"
+						placeholder="&#xf084;   senha" ref={(node) => this._password = node} />
 						
 					</div>
 					<div className="row">
-						<div className="col-md-3">
+						<div className="col-md-12">
 							<button 
 								type="submit" 
-								className="btn btn-default">
+								className="loginbt btn btn-default btn-block">
 								Cadastrar
 							</button>
 						</div>
+						<br></br>
+						<br></br>
 						<div className="col-md-9" style={{paddingTop: "7px"}}>
 							<span>
 								{this.additionalText()}
