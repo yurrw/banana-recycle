@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, PropTypes } from 'react'
 
 export default class Main extends React.Component {
@@ -16,10 +17,6 @@ export default class Main extends React.Component {
 		let pos = this.randomNumber(0, 1);
 		console.log(arr[pos]);
 		return (arr[pos]).toString();
-	}
-	render() {
-		const { showing } = this.state;
-		return (
 			<div className="container Welcome-box cs-card">
 				<div className="Welcome-title">
 					<span className="titlePageGGD">Apresente seu QRCODE para troca </span>
@@ -53,6 +50,18 @@ export default class Main extends React.Component {
 				<br></br>
 				<br></br>
 				<br></br>
+=======
+			<div>
+			/*
+				<QrReader
+					delay={300}
+					onError={this.handleError}
+					onScan={this.handleScan}
+					style={{ width: '100%' }}
+				/>
+			*/
+				<p>{this.state.result}</p>
+>>>>>>> ffb326ab7644a260bd5d898ce061bc6a8e90cf39
 			</div>
 		);
 	}

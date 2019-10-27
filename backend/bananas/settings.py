@@ -99,7 +99,8 @@ DATABASES = {
         'NAME': 'bananal',
         'USER': 'banana',
         'PASSWORD': 'bananadepijama',
-        'HOST': 'localhost',
+        'HOST': 'bananas_db',
+        # 'HOST': 'localhost',
         'PORT': '2384',
     }
 }

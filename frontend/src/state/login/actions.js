@@ -26,7 +26,7 @@ export function getToken(username, password) {
 			dispatch(push("/"));
 		})
 		.catch((e) => {
-			console.trace()
+			console.trace();
 			dispatch(isFetching(false));
 			console.warn(e);
 			// in case of fire the problem is down here
