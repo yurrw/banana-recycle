@@ -33,8 +33,8 @@ export default class ExameItem extends React.Component {
 	}
 
 	render () {
-		const { id, title, isSelecting } = this.props;
-		console.log(id);		
+		const { id, title, imgpath, isSelecting } = this.props;
+		console.log(imgpath);		
 		return (			
 			<div className="document-container">
 				<div className={`document-card cs-card`}>					
@@ -43,6 +43,7 @@ export default class ExameItem extends React.Component {
 							<span 
 								className="group-name"
 								data-place="left">
+								<img src={imgpath} style={{'width': '32', 'height': '32'}} />
 							</span>
 							<ReactTooltip />
 						</div>
@@ -54,28 +55,9 @@ export default class ExameItem extends React.Component {
 					</div>
 					<div className="document-right">
 						<div className="document-actions">
-							<span>
-								<i 
-									className="fa fa-eye pointer hoverable" 
-									data-tip="Detalhes" 
-									onClick={this.handleDetailsClick.bind(this)}
-								/>								
-								&nbsp;&nbsp;
-								<i 
-									className="far fa-map pointer hoverable" 
-									data-tip="Localização" 
-								/>
-								&nbsp;&nbsp;									
-								<i 
-									className="far fa-copy pointer hoverable" 
-									data-tip="Arquivos" 
-								/>																															
-								&nbsp;&nbsp;
-								<i 
-									className="fa fa-edit pointer hoverable" 
-									data-tip="Editar Informações" 
-								/>
-							</span>							
+							<button className='buybutton' >
+									TROCAR
+							</button>		
 							<ReactTooltip />
 						</div>
 						<div className="document-loading">
@@ -94,5 +76,6 @@ ExameItem.propTypes = {
 	id: PropTypes.number.isRequired,
 	index: PropTypes.number.isRequired,
 	title: PropTypes.string.isRequired,
+	imgpath: PropTypes.string.isRequired,
 	isSelecting: PropTypes.number
 };

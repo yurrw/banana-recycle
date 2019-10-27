@@ -30,6 +30,7 @@ export default (store) => (
 			<Route path='change_password' component={ChangePasswordContainer} />
 			<Route path='authexams/view' component={ExameListContainer} />
 			<Route path='qrcode' component={QrcodeContainer} />
+			<Route path='mktplace' component={ExameListContainer} />
 
 			<Route path='pessoa/create' component={PessoaContainer} />
 			{/* <Route path='authexam/create' component={ExameContainer} /> */}

@@ -20,6 +20,7 @@ export function getExames() {
 		.then((response) => checkStatus(response, dispatch))
 		.then((response) => response.json())
 		.then((json) => {
+			
 			dispatch(isFetchingDocuments(false));
 			dispatch(setDocuments(json));
 		})

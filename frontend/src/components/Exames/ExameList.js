@@ -6,7 +6,7 @@ export default class ExameList extends React.Component {
 	
 	componentWillMount() {
 		// this.props.actions.clearForm();
-		this.props.actions.getExames();		
+		// this.props.actions.getExames();		
 	}
 
 	filterByPage(array, itemsPerPage, page) {
@@ -36,6 +36,12 @@ export default class ExameList extends React.Component {
 
 	render () {
 		const { actions, exames } = this.props;
+		let listItens = [ 
+			{ id: "1", title: "R$ 20 Google Play", imgpath: "/playstore.png" }, 
+			{ id: "2", title: "R$ 25 Steam", imgpath: "/Steam_Logo.png" },
+			{ id: "3", title: "R$ 25 Dota 2", imgpath: "/dota-2-icon-28.jpg" },
+			{ id: "4", title: "R$ 25 League of Legends", imgpath: "/lol.png" }
+		];
 		// Shows loader if fetching documents and list is empty
 		if ( exames.isFetching && exames.list.length === 0 ) {
 			return (
@@ -51,22 +57,26 @@ export default class ExameList extends React.Component {
 		return (
 			<div>
 				<div>
-					{this.getDocuments().map((doc, i) => 
+					{listItens.map((doc, i) => 
 						<DocumentItem							
 							isSelecting={exames.isSelecting}	
 							index={i}
-							key={i} 
+							key={i}
+							imgpath={doc.imgpath}
 							title={doc.title} 
 							id={doc.id}							
 						/>
 					)}
 				</div>
-				<Pagination 
+				<div style={{'margin-right': '30'}}>
+					<Pagination 
 					pagination={this.props.exames.pagination} 
 					setPage={actions.setCurrentPage}
 					totalPages={this.getTotalPages()} 
-					totalDocuments={this.getTotalDocuments()}
+					totalDocuments={listItens.length}
 				/>
+				</div>
+				
 			</div>
 		);
 	}

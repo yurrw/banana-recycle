@@ -90,7 +90,7 @@ export default class Pagination extends React.Component {
 							{this.getNext()}
 							<li>
 								<span style={buttonStyle}>
-									{this.props.totalDocuments} Documentos
+									{this.props.totalDocuments} Ofertas
 								</span>
 							</li>
 						</ul>
