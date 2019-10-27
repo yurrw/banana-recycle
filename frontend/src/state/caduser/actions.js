@@ -28,19 +28,19 @@ export function criaUsuario(user, password, email) {
 	};
 }
 
-function isFetchingCadastro(bool) {
-	return {
-		type: "IS_FETCHING_CADASTRO",
-		bool
-	};	
-}
+// function isFetchingCadastro(bool) {
+// 	return {
+// 		type: "IS_FETCHING_CADASTRO",
+// 		bool
+// 	};	
+// }
 
-function setDocuments(documents) {
-	return {
-		type: "SET_DOCUMENTS",
-		documents
-	};	
-}
+// function setDocuments(documents) {
+// 	return {
+// 		type: "SET_DOCUMENTS",
+// 		documents
+// 	};	
+// }
 
 export function setCurrentPage(currentPage) {
 	return {

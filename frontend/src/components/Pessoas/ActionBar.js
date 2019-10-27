@@ -1,23 +1,23 @@
 import React, { PropTypes } from 'react';
 import { getButtonUI } from '../../businessLogic/components';
-import ReactTooltip from 'react-tooltip';
+// import ReactTooltip from 'react-tooltip';
 export default class ActionBar extends React.Component {
 
 	getDeleteButton() {
-		return this.props.showDelete 
-			? (
-			<div className="col-md-1">			
-				<button 
-					type="button" 
-					className="btn btn-danger btn-block"
-					disabled={this.props.upload.status === "IN_PROGRESS"}
-					onClick={() => this.props.onDelete()}						
-				>
-					<i className="fa fa-trash fa-2x" data-tip="Deletar Documento" />
-				</button>
-				<ReactTooltip />
-			</div>
-			) : null;
+		// return this.props.showDelete 
+		// 	? (
+		// 	<div className="col-md-1">			
+		// 		<button 
+		// 			type="button" 
+		// 			className="btn btn-danger btn-block"
+		// 			disabled={this.props.upload.status === "IN_PROGRESS"}
+		// 			onClick={() => this.props.onDelete()}						
+		// 		>
+		// 			<i className="fa fa-trash fa-2x" data-tip="Deletar Documento" />
+		// 		</button>
+		// 		<ReactTooltip />
+		// 	</div>
+		// 	) : null;
 	}
 
 	render () {				
@@ -32,7 +32,7 @@ export default class ActionBar extends React.Component {
 					<button 
 						type="button" 
 						className="btn btn-primary btn-lg btn-block"
-						disabled={(upload.status === "IN_PROGRESS" ) || !(this.props.salvarEnabled)}
+						// disabled={(upload.status === "IN_PROGRESS" ) || !(this.props.salvarEnabled)}
 						onClick={() => {
 							if ( document.title === "" ) {
 								alert("Título é obrigatório!");

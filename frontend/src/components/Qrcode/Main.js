@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react'
-import QrReader from 'react-qr-reader'
+import React from 'react';
+import QrReader from 'react-qr-reader';
 
 export default class Main extends React.Component {
 	state = {
@@ -10,11 +10,11 @@ export default class Main extends React.Component {
 		if (data) {
 			this.setState({
 				result: data
-			})
+			});
 		}
 	}
 	handleError = err => {
-		console.error(err)
+		console.error(err);
 	}
 	render() {
 		return (
@@ -27,7 +27,7 @@ export default class Main extends React.Component {
 				/>
 				<p>{this.state.result}</p>
 			</div>
-		)
+		);
 	}
 }
  
